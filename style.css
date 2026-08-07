@@ -82,3 +82,97 @@ footer h4 { font-family: var(--font-brand); font-size: 1.5rem; margin-bottom: 20
     .nav-links { display: none; }
     footer { grid-template-columns: 1fr; }
 }
+
+/* --- MOBILE MENU BUTTON --- */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: inherit;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* --- RESPONSIVE MOBILE STYLES --- */
+@media (max-width: 900px) {
+    /* 1. Mobile Navigation Drawer */
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Hidden by default on mobile */
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        gap: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex; /* Shown when toggled */
+    }
+
+    .nav-links a {
+        color: var(--text-dark) !important;
+        text-shadow: none !important;
+        font-size: 1.2rem;
+    }
+
+    /* 2. Hero Box Alignment for Mobile */
+    .hero {
+        padding: 120px 5% 60px;
+        justify-content: center;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .hero-text {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* 3. Touch Device Card Overlay (No Hover Required) */
+    .project-overlay {
+        opacity: 1 !important; /* Always visible on mobile */
+        background: linear-gradient(to top, rgba(44, 42, 41, 0.9) 0%, rgba(44, 42, 41, 0.3) 60%, transparent 100%) !important;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .project-overlay h3 {
+        transform: translateY(0) !important;
+        font-size: 1.4rem;
+    }
+
+    .project-overlay p {
+        font-size: 0.95rem;
+    }
+}
