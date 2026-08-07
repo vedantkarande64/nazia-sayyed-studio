@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Nazia Sayyed Studio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        /* --- PAGE HEADER --- */
+        .page-header { padding: 160px 5% 60px; text-align: center; }
+        .page-header h1 { font-family: var(--font-brand); font-size: 3.5rem; color: var(--accent); margin-bottom: 20px; }
+        .page-header p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; color: var(--text-dark); font-style: italic; }
+
+        /* --- ABOUT STUDIO SECTION --- */
+        .about-studio { padding: 40px 5% 80px; display: flex; justify-content: center; }
+        .about-text-container { max-width: 800px; text-align: justify; }
+        .about-text-container p { font-size: 1.25rem; margin-bottom: 30px; line-height: 1.8; }
+        .about-text-container p:first-child { font-size: 1.4rem; font-weight: 500; text-align: center; margin-bottom: 50px; }
+
+        /* --- FOUNDER SECTION --- */
+        .founder-section { display: flex; align-items: center; gap: 8%; padding: 100px 10% 120px; background-color: #EBE5E0; }
+        .founder-img { width: 40%; position: relative; }
+        .founder-img::before { content: ''; position: absolute; top: -20px; left: -20px; width: 100%; height: 100%; border: 1px solid var(--accent); z-index: 0; }
+        .founder-img img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; position: relative; z-index: 1; }
+        .founder-text { width: 52%; }
+        .founder-text h2 { font-family: var(--font-brand); font-size: 2.5rem; color: var(--accent); margin-bottom: 30px; }
+        .founder-text p { font-size: 1.15rem; margin-bottom: 25px; line-height: 1.8; }
+
+        /* --- FOOTER --- */
+        footer { background-color: var(--accent); color: var(--bg-color); padding: 80px 5% 40px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
+        footer h4 { font-family: var(--font-brand); font-size: 1.5rem; margin-bottom: 20px; }
+        .footer-links p, .footer-links a { color: #d5d0cd; margin-bottom: 10px; display: block; transition: color 0.3s; }
+        .footer-links a:hover { color: #fff; }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .founder-section { flex-direction: column; padding: 80px 5%; gap: 50px; }
+            .founder-img, .founder-text { width: 100%; }
+            footer { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <div id="header-placeholder"></div>
+
+    <!-- HEADER -->
+    <header class="page-header reveal">
+        <h1>About Us</h1>
+    </header>
+
+    <!-- STUDIO INTRO -->
+    <section class="about-studio reveal">
+        <div class="about-text-container">
+            <p>Nazia Sayyed Studio is a luxury interior design practice built on a legacy of craftsmanship.</p>
+            <p>For generations, our family has been involved in construction and interior design, shaping spaces with an unwavering commitment to quality, precision, and excellence. This heritage continues to influence every project we undertake.</p>
+            <p>We believe that exceptional interiors are created through a thoughtful balance of design, functionality, and meticulous execution. Every space is approached as a unique expression of its owner, carefully curated to reflect their lifestyle while maintaining a timeless design language.</p>
+            <p>Working across residential, commercial, retail, and hospitality projects, we create interiors that are refined, enduring, and deeply personal—spaces where thoughtful design and impeccable craftsmanship come together to elevate everyday living.</p>
+        </div>
+    </section>
+
+    <!-- FOUNDER SECTION -->
+    <section class="founder-section reveal">
+        <div class="founder-img">
+            <!-- Replace with actual founder image. Using a chic placeholder for now -->
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nazia Sayyed">
+        </div>
+        <div class="founder-text">
+            <h2>About the Founder</h2>
+            <p>Founded by Nazia Sayyed, the studio is shaped by her enduring interest in art, craftsmanship, and the human experience of space. She believes that interior design is not merely a technical discipline, but an intuitive process of understanding how people live, feel, and connect with their surroundings.</p>
+            <p>Guided by observation and an appreciation for timeless design, her work seeks to create spaces that are quietly expressive, deeply personal, and crafted to endure.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+    <script src="components.js"></script>
+
+    <!-- JS for Animations -->
+    <script>
+        function revealElements() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) reveals[i].classList.add('active');
+            }
+        }
+        window.addEventListener('scroll', revealElements);
+        revealElements();
+    </script>
+</body>
+</html>
