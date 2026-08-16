@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Nazia Sayyed Studio</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <!-- We no longer need the Belleza/Garamond fonts here since style.css handles the new fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    
     <style>
-
-
         /* --- PAGE HEADER --- */
         .page-header { padding: 160px 5% 80px; text-align: center; }
-        .page-header h1 { font-family: var(--font-brand); font-size: 3.5rem; color: var(--accent); margin-bottom: 20px; }
-        .page-header p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: var(--text-dark); font-style: italic; line-height: 1.8; }
+        .page-header h1 { 
+            font-family: var(--font-brand); font-size: 3.5rem; color: var(--text-dark); 
+            margin-bottom: 20px; font-weight: normal; text-transform: uppercase; letter-spacing: 2px;
+        }
+        .page-header p { 
+            font-family: var(--font-body); font-size: 1.1rem; max-width: 800px; 
+            margin: 0 auto; color: var(--text-dark); line-height: 1.8; 
+        }
 
         /* --- SERVICES BLOCKS --- */
         .services-container { padding: 40px 5% 100px; display: flex; flex-direction: column; gap: 100px; }
@@ -22,26 +27,24 @@
         .service-block { display: flex; align-items: center; gap: 8%; }
         .service-block.reverse { flex-direction: row-reverse; }
 
-        .service-img { width: 50%; background: #e3d8d1; aspect-ratio: 16/10; position: relative; overflow: hidden; }
+        .service-img { width: 50%; background: #eaeaea; aspect-ratio: 16/10; position: relative; overflow: hidden; }
         .service-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
         .service-block:hover .service-img img { transform: scale(1.03); }
 
         .service-text { width: 42%; }
-        .service-text h2 { font-family: var(--font-brand); font-size: 2.2rem; color: var(--accent); margin-bottom: 25px; border-bottom: 1px solid rgba(74, 69, 66, 0.2); padding-bottom: 15px; }
-        .service-text p { font-size: 1.15rem; line-height: 1.8; }
+        .service-text h2 { 
+            font-family: var(--font-brand); font-size: 2.2rem; color: var(--text-dark); 
+            margin-bottom: 25px; border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+            padding-bottom: 15px; font-weight: normal; 
+        }
+        .service-text p { font-family: var(--font-body); font-size: 1.1rem; line-height: 1.8; color: var(--text-dark); }
 
-        /* --- FOOTER --- */
-        footer { background-color: var(--accent); color: var(--bg-color); padding: 80px 5% 40px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
-        footer h4 { font-family: var(--font-brand); font-size: 1.5rem; margin-bottom: 20px; }
-        .footer-links p, .footer-links a { color: #d5d0cd; margin-bottom: 10px; display: block; transition: color 0.3s; }
-        .footer-links a:hover { color: #fff; }
-
+        /* --- MOBILE RESPONSIVENESS --- */
         @media (max-width: 900px) {
-            .nav-links { display: none; }
             .service-block, .service-block.reverse { flex-direction: column; gap: 30px; }
             .service-img, .service-text { width: 100%; }
+            .service-img { aspect-ratio: 16/10; } /* Forces beautiful landscape ratio on mobile */
             .services-container { gap: 80px; }
-            footer { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -59,11 +62,10 @@
     <!-- SERVICES LIST -->
     <section class="services-container">
         
-        <!-- Service 1 -->
+        <!-- Service 1: Oberoi Master Bedroom -->
         <div class="service-block reveal">
-            <!-- Using local JSON path for Residential -->
             <div class="service-img">
-                <img src="Images/RESIDENTIAL/1. OBEROI SKYCITY/LIVING ROOM/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80'" alt="Turnkey Interior Solutions">
+                <img src="Images/RESIDENTIAL/1. OBEROI SKYCITY/MASTER BEDROOM AND MASTER BATH/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=1200'" alt="Turnkey Interior Solutions">
             </div>
             <div class="service-text">
                 <h2>Turnkey Interior Solutions</h2>
@@ -71,11 +73,10 @@
             </div>
         </div>
 
-        <!-- Service 2 (Reverse Layout) -->
+        <!-- Service 2: Aisraa (Reverse Layout) -->
         <div class="service-block reverse reveal">
-            <!-- Using local JSON path for Commercial -->
             <div class="service-img">
-                <img src="Images/COMMERCIAL/1. MRL GROUP/4.jpg" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80'" alt="Design Consultation">
+                <img src="Images/RETAIL/1. AISRAA/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200'" alt="Design Consultation">
             </div>
             <div class="service-text">
                 <h2>Design Consultation</h2>
@@ -83,11 +84,10 @@
             </div>
         </div>
 
-        <!-- Service 3 -->
+        <!-- Service 3: Poonam Cluster Living Room -->
         <div class="service-block reveal">
-            <!-- Using local JSON path for Retail -->
             <div class="service-img">
-                <img src="Images/RETAIL/1. AISRAA/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80'" alt="Interior Styling">
+                <img src="Images/RESIDENTIAL/6. POONAM CLUSTER/LIVING ROOM/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200'" alt="Interior Styling">
             </div>
             <div class="service-text">
                 <h2>Interior Styling</h2>
