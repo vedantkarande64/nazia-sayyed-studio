@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nazia Sayyed Studio | Luxury Interior Design</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head>
 <body class="homepage">
 <div id="header-placeholder"></div>
@@ -38,3 +39,323 @@ function revealElements(){document.querySelectorAll('.reveal').forEach(el=>{if(e
 fetch('portfolio_data.json').then(r=>r.json()).then(data=>{const grid=document.getElementById('featured-projects-grid');let all=[];['RESIDENTIAL','COMMERCIAL','RETAIL'].forEach(cat=>Object.entries(data[cat]||{}).forEach(([id,p])=>all.push({id,...p,category:cat})));all.slice(0,6).forEach(p=>{const card=document.createElement('a');card.className='project-card reveal active';card.href=`portfolio.html?project=${encodeURIComponent(p.id)}`;card.innerHTML=`<img src="${p.thumbnail}" alt="${p.title}" loading="lazy"><div class="project-overlay"><h3>${p.title}</h3>${p.location?`<p class="proj-loc">${p.location}</p>`:''}<p class="proj-tag">${p.tagline||p.category}</p></div>`;grid.appendChild(card)})}).catch(console.error);
 let currentSlideIndex=0;const slider=document.getElementById('testimonial-slider'),dots=document.querySelectorAll('.slider-dots .dot');function updateSlider(){slider.style.transform=`translateX(-${currentSlideIndex*100}%)`;dots.forEach((d,i)=>d.classList.toggle('active',i===currentSlideIndex))}function goToSlide(i){currentSlideIndex=i;updateSlider();clearInterval(slideTimer);slideTimer=setInterval(nextSlide,6000)}function nextSlide(){currentSlideIndex=(currentSlideIndex+1)%3;updateSlider()}let slideTimer=setInterval(nextSlide,6000);
 </script></body></html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazia Sayyed Studio | Luxury Interior Design</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="homepage">
+
+<!-- NAVIGATION -->
+    <div id="header-placeholder">
+        <nav id="navbar">
+            <a href="index.html" class="logo-container">
+                <span class="logo-main">NAZIA SAYYED</span>
+                <span class="logo-sub">INTERIOR DESIGN STUDIO</span>
+            </a>
+            <div class="nav-right">
+                <div class="nav-links" id="nav-links">
+                    <a href="index.html">HOME</a>
+                    <a href="portfolio.html">PROJECTS</a>
+                    <a href="about.html">ABOUT US</a>
+                    <a href="services.html">OUR SERVICES</a>
+                    <a href="#" onclick="openWhatsApp(); return false;">CONTACT</a>
+                </div>
+                <button class="mobile-menu-btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- HERO VIDEO -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <!-- Your Looping Video -->
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="Images/coverpage.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Buttons Left Aligned (Matching the Image) -->
+        <div class="hero-content-left">
+            <div class="hero-buttons">
+                <button class="btn-solid" onclick="window.location.href='portfolio.html'">VIEW PROJECTS ↗</button>
+                <button class="btn-outline" onclick="openWhatsApp()">ENQUIRE</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- WHO WE ARE -->
+    <section class="who-we-are reveal">
+        <div class="who-image">
+            <img src="Images/RESIDENTIAL/6. POONAM CLUSTER/LIVING ROOM/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80'" alt="Nazia Sayyed Studio Interior">
+        </div>
+        <div class="who-text">
+            <h2>Who we are?</h2>
+            <p>Nazia Sayyed Studio is a luxury interior design practice built on a legacy of craftsmanship. For generations, our family has been involved in construction and interior design, shaping spaces with an unwavering commitment to quality, precision, and excellence. This heritage continues to influence every project we undertake.</p>
+            <p>We believe that exceptional interiors are created through a thoughtful balance of design, functionality, and meticulous execution. Every space is approached as a unique expression of its owner, carefully curated to reflect their lifestyle while maintaining a timeless design language.</p>
+        </div>
+    </section>
+
+    <!-- 6 PROJECTS GRID -->
+    <section class="projects-section">
+        <h2 class="section-title reveal">Projects</h2>
+        <div class="projects-grid" id="featured-projects-grid">
+            <!-- 6 Dynamic cards injected by JS -->
+        </div>
+        
+        <!-- NEW: Explore All Projects Button -->
+        <div class="view-all-wrapper reveal">
+            <button class="btn-view-all" onclick="window.location.href='portfolio.html'">Explore All Projects ↗</button>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section reveal">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+            <div class="service-item" onclick="window.location.href='services.html'">
+                <img src="Images/RESIDENTIAL/1. OBEROI SKYCITY/MASTER BEDROOM AND MASTER BATH/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=600'" alt="Turnkey Interior Solutions">
+                <h3>Turnkey Interior Solutions</h3>
+            </div>
+            <div class="service-item" onclick="window.location.href='services.html'">
+                <img src="Images/RETAIL/1. AISRAA/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=600'" alt="Design Consultation">
+                <h3>Design Consultation</h3>
+            </div>
+            <div class="service-item" onclick="window.location.href='services.html'">
+                <img src="Images/RESIDENTIAL/6. POONAM CLUSTER/LIVING ROOM/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600'" alt="Interior Styling">
+                <h3>Interior Styling</h3>
+            </div>
+        </div>
+    </section>
+
+<!-- TESTIMONIALS SLIDER -->
+    <section class="testimonials-section reveal">
+        <h2 class="section-title">Testimonials</h2>
+        
+        <div class="testimonial-slider-container">
+            <div class="testimonial-slider" id="testimonial-slider">
+                <!-- Slide 1 -->
+                <div class="testimonial-slide">
+                    <p class="quote">"Nazia Sayyed Studio transformed our bare shell into a timeless sanctuary. Unparalleled craftsmanship."</p>
+                    <p class="author">— A. Client</p>
+                </div>
+                <!-- Slide 2 -->
+                <div class="testimonial-slide">
+                    <p class="quote">"The attention to detail and ability to capture our vision was extraordinary. A seamless process."</p>
+                    <p class="author">— R. Sharma</p>
+                </div>
+                <!-- Slide 3 -->
+                <div class="testimonial-slide">
+                    <p class="quote">"A truly luxurious experience from concept to final handover. Our home is a work of art."</p>
+                    <p class="author">— K. Kapoor</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Dots -->
+            <div class="slider-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT US PAGE -->
+    <section class="contact-section reveal">
+        <div class="contact-layout">
+            
+            <!-- Left Side: Address & Map -->
+            <div class="contact-left">
+                <h2>CONTACT US</h2>
+                <p>Nazia Sayyed Studio,<br>20th Floor, Oberoi Commerz II,<br>International Business Park, Off WEH,<br>Goregaon East, Mumbai 400063</p>
+                <p style="margin-top: 20px;">info@naziasayyed.com</p>
+                
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.9975765709923!2d72.85764287595565!3d19.16252574924773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b71330e22cc3%3A0x6b744265cb3bb4f8!2sCommerz%20-%20I!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <!-- Right Side: Form -->
+            <div class="contact-right">
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-row">
+                        <input type="text" class="contact-input" name="name" placeholder="Name" required>
+                        <input type="tel" class="contact-input" name="phone" placeholder="Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="contact-input" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="contact-input" name="description" placeholder="Please provide a brief project description and any other important information" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="contact-input" name="budget" placeholder="Total Project Budget">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="contact-input" name="timeline" placeholder="Project to be completed by">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="contact-input" name="source" placeholder="How did you hear about Nazia Sayyed Studio">
+                    </div>
+                    <button type="submit" class="btn-submit-contact">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW MINIMAL FOOTER -->
+    <footer class="minimal-footer">
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/naziasayyedstudio?igsh=MWw0bWdqM3RiZ29peg%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://in.linkedin.com/in/nazia-saba-sayyed-819b86b1" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2026 Nazia Sayyed Studio. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JS LOGIC -->
+    <script>
+        // 1. Mobile Menu Logic
+        const toggleBtn = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        if(toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = toggleBtn.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // 2. Navbar Scroll Logic
+        const nav = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+                nav.classList.remove('navbar-glass');
+            } else {
+                nav.classList.remove('scrolled');
+                nav.classList.add('navbar-glass');
+            }
+        });
+
+        // 3. Scroll Reveal Elements
+        function revealElements() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) reveals[i].classList.add('active');
+            }
+        }
+        window.addEventListener('scroll', revealElements);
+        revealElements(); 
+
+        // 4. Smart WhatsApp Link function
+        function openWhatsApp() {
+            const phone = "919960578360";
+            const message = "Hello Nazia Sayyed Studio, I would like to inquire about interior design services.";
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+            } else {
+                window.open(`https://web.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`, '_blank');
+            }
+        }
+
+        // 5. Fetch 6 Projects from JSON
+        fetch('portfolio_data.json')
+            .then(response => response.json())
+            .then(data => {
+                const grid = document.getElementById('featured-projects-grid');
+                grid.innerHTML = ''; 
+                
+                let allProjects = [];
+                const categories = ['RESIDENTIAL', 'COMMERCIAL', 'RETAIL'];
+                
+                categories.forEach(category => {
+                    if (data[category]) {
+                        Object.values(data[category]).forEach(proj => {
+                            proj.fallbackSubtitle = category.charAt(0).toUpperCase() + category.slice(1).toLowerCase();
+                            allProjects.push(proj);
+                        });
+                    }
+                });
+
+                const top6Projects = allProjects.slice(0, 6);
+
+                top6Projects.forEach(proj => {
+                    const thumbSrc = proj.thumbnail ? proj.thumbnail : 'https://images.unsplash.com/photo-1600607686527-6fb886090705?w=600';
+                    
+                    // Format Location and Tagline variables
+                    const locationHTML = proj.location ? `<p class="proj-loc">${proj.location}</p>` : '';
+                    const taglineText = proj.tagline ? proj.tagline : proj.fallbackSubtitle;
+                    const taglineHTML = `<p class="proj-tag">${taglineText}</p>`;
+
+                    const card = document.createElement('div');
+                    card.className = 'project-card reveal active';
+                    card.onclick = () => window.location.href = 'portfolio.html'; 
+                    
+                    // Inject the 3 stacked lines of text
+                    card.innerHTML = `
+                        <img src="${thumbSrc}" alt="${proj.title}">
+                        <div class="project-overlay">
+                            <h3>${proj.title}</h3>
+                            ${locationHTML}
+                            ${taglineHTML}
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error loading featured projects:', error));
+
+        // 6. Testimonials Slider Logic
+        let currentSlideIndex = 0;
+        const sliderWrapper = document.getElementById('testimonial-slider');
+        const dots = document.querySelectorAll('.slider-dots .dot');
+        const totalSlides = document.querySelectorAll('.testimonial-slide').length;
+        let slideInterval;
+
+        function updateSliderPosition() {
+            // Slide horizontally by -100% per slide
+            sliderWrapper.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            
+            // Update active dot
+            dots.forEach(dot => dot.classList.remove('active'));
+            if(dots[currentSlideIndex]) {
+                dots[currentSlideIndex].classList.add('active');
+            }
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            updateSliderPosition();
+        }
+
+        function goToSlide(index) {
+            currentSlideIndex = index;
+            updateSliderPosition();
+            // Reset the timer when a user manually clicks a dot
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        // Auto-slide every 5 seconds
+        slideInterval = setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
+>>>>>>> ad4204b2c7229ab17af88abeff76f495488cac37

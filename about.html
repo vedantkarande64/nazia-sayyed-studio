@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Studio | Nazia Sayyed Studio</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head>
 <body><div id="header-placeholder"></div>
 <section class="studio-hero">
@@ -17,3 +18,110 @@
  </div>
 </section>
 <div id="footer-placeholder"></div><script src="components.js"></script></body></html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Nazia Sayyed Studio</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* --- PAGE HEADER --- */
+        .page-header { padding: 130px 5% 10px; text-align: center; }
+        .page-header h1 { 
+            font-family: var(--font-brand); font-size: 3.5rem; color: var(--text-dark); 
+            margin-bottom: 0; font-weight: normal; text-transform: uppercase; letter-spacing: 2px;
+        }
+
+        /* --- ABOUT STUDIO SECTION --- */
+        .about-studio { padding: 10px 5% 80px; display: flex; justify-content: center; }
+        
+        /* INCREASED MAX-WIDTH: This allows the text to spread much wider across the screen */
+        .about-text-container { max-width: 1200px; text-align: center; }
+        
+        .about-text-container p { font-family: var(--font-body); font-size: 1.15rem; margin-bottom: 25px; line-height: 1.8; color: var(--text-dark); }
+        .about-text-container p:first-child { font-size: 1.4rem; margin-bottom: 35px; color: var(--accent); }
+
+        /* --- FOUNDER SECTION --- */
+        .founder-section { 
+            display: flex; align-items: center; gap: 8%; padding: 100px 10% 120px; 
+            background-color: transparent; border-top: 1px solid rgba(0, 0, 0, 0.1); 
+        }
+        .founder-img { width: 40%; position: relative; }
+        .founder-img::before { content: ''; position: absolute; top: -15px; left: -15px; width: 100%; height: 100%; border: 1px solid var(--accent); z-index: 0; }
+        .founder-img img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; position: relative; z-index: 1; }
+        
+        .founder-text { width: 52%; text-align: left; }
+        .founder-text h2 { 
+            font-family: var(--font-brand); font-size: 2.5rem; color: var(--text-dark); 
+            margin-bottom: 30px; font-weight: normal; 
+        }
+        .founder-text p { font-family: var(--font-body); font-size: 1.1rem; margin-bottom: 25px; line-height: 1.8; color: var(--text-dark); }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 900px) {
+            .founder-section { flex-direction: column; padding: 60px 5%; gap: 50px; }
+            .founder-img, .founder-text { width: 100%; }
+            .founder-img::before { top: -10px; left: -10px; }
+            .about-text-container { text-align: left; }
+            .about-text-container p:first-child { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <div id="header-placeholder"></div>
+
+    <!-- HEADER -->
+    <header class="page-header reveal">
+        <h1>About Us</h1>
+    </header>
+
+    <!-- STUDIO INTRO -->
+    <section class="about-studio reveal">
+        <div class="about-text-container">
+            <p>Nazia Sayyed Studio is a luxury interior design practice built on a legacy of craftsmanship.</p>
+            <p>For generations, our family has been involved in construction and interior design, shaping spaces with an unwavering commitment to quality, precision, and excellence. This heritage continues to influence every project we undertake.</p>
+            <p>We believe that exceptional interiors are created through a thoughtful balance of design, functionality, and meticulous execution. Every space is approached as a unique expression of its owner, carefully curated to reflect their lifestyle while maintaining a timeless design language.</p>
+            <p>Working across residential, commercial, retail, and hospitality projects, we create interiors that are refined, enduring, and deeply personal—spaces where thoughtful design and impeccable craftsmanship come together to elevate everyday living.</p>
+        </div>
+    </section>
+
+    <!-- FOUNDER SECTION -->
+    <section class="founder-section reveal">
+        <div class="founder-img">
+            <!-- Replace with actual founder image. -->
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nazia Sayyed">
+        </div>
+        <div class="founder-text">
+            <h2>About the Founder</h2>
+            <p>Founded by Nazia Sayyed, the studio is shaped by her enduring interest in art, craftsmanship, and the human experience of space. She believes that interior design is not merely a technical discipline, but an intuitive process of understanding how people live, feel, and connect with their surroundings.</p>
+            <p>Guided by observation and an appreciation for timeless design, her work seeks to create spaces that are quietly expressive, deeply personal, and crafted to endure.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+    <script src="components.js"></script>
+
+    <!-- JS for Animations -->
+    <script>
+        function revealElements() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) reveals[i].classList.add('active');
+            }
+        }
+        window.addEventListener('scroll', revealElements);
+        revealElements();
+    </script>
+</body>
+</html>
+>>>>>>> ad4204b2c7229ab17af88abeff76f495488cac37

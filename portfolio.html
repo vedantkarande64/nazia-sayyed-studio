@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Work | Nazia Sayyed Studio</title><link rel="stylesheet" href="style.css"></head>
 <body><div id="header-placeholder"></div>
 <section class="page-hero"><div class="container page-hero-inner"><div><div class="eyebrow">SELECTED WORK</div><h1>WORK</h1></div><p>A collection of spaces shaped by purpose, people and place—across residential, commercial and retail interiors.</p></div></section>
@@ -13,3 +14,280 @@ function openProject(id){const p=projectData[id];if(!p)return;document.getElemen
 function closeProject(){document.getElementById('dynamic-viewer').classList.remove('active');document.body.classList.remove('no-scroll');history.replaceState(null,'','portfolio.html')}
 addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('dynamic-viewer').classList.contains('active'))closeProject()});
 </script></body></html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Nazia Sayyed Studio</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- PORTFOLIO HEADER --- */
+        .portfolio-header { padding: 150px 5% 40px; text-align: center; }
+        .portfolio-header h1 { 
+            font-family: var(--font-brand); font-size: 3.5rem; color: var(--text-dark); 
+            margin-bottom: 20px; font-weight: normal; text-transform: uppercase; letter-spacing: 2px;
+        }
+        .portfolio-header p { font-size: 1.1rem; max-width: 600px; margin: 0 auto; color: var(--text-dark); }
+
+        /* --- CATEGORY TITLES --- */
+        .gallery-container { padding: 20px 5% 100px; }
+        .category-title { 
+            font-family: var(--font-brand); font-size: 2.2rem; margin: 60px 0 30px; 
+            color: var(--text-dark); border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+            padding-bottom: 10px; font-weight: normal; letter-spacing: 1px; text-transform: uppercase;
+        }
+
+        /* Note: The Grid and Card CSS (.projects-grid, .project-card, .project-overlay) 
+           are now automatically loaded from your updated style.css! */
+
+        /* --- DYNAMIC FULLSCREEN VIEWER --- */
+        #dynamic-viewer {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--bg-color); z-index: 2000;
+            overflow-y: auto; overflow-x: hidden; display: none; 
+            opacity: 0; transition: opacity 0.4s ease;
+        }
+        #dynamic-viewer.active { display: block; opacity: 1; }
+
+        /* Editorial Style Back Button */
+        .btn-back {
+            position: fixed; top: 30px; left: 5%; font-family: var(--font-body);
+            font-size: 0.8rem; cursor: pointer; border: 1px solid rgba(0,0,0,0.3); background: rgba(246, 246, 246, 0.9);
+            color: var(--text-dark); padding: 10px 20px; text-transform: uppercase; letter-spacing: 2px;
+            z-index: 3000; transition: all 0.3s ease; backdrop-filter: blur(5px);
+        }
+        .btn-back:hover { background: var(--text-dark); color: #fff; border-color: var(--text-dark); }
+
+        .viewer-header { padding: 120px 5% 40px; position: relative; text-align: center; }
+        .viewer-header h2 { font-family: var(--font-brand); font-size: 3rem; color: var(--text-dark); font-weight: normal; }
+        .viewer-header p { font-family: var(--font-body); font-size: 1.1rem; color: var(--accent); margin-top: 10px; text-transform: uppercase; letter-spacing: 2px; }
+
+        .room-section { margin-bottom: 80px; }
+        .room-heading {
+            font-family: var(--font-brand); font-size: 1.8rem; color: var(--text-dark);
+            margin: 0 5% 30px; border-bottom: 1px solid rgba(0, 0, 0, 0.1); padding-bottom: 10px; font-weight: normal;
+        }
+
+        .viewer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 0 5%; }
+        .span-full { grid-column: span 2; }
+        
+        .img-wrapper { position: relative; overflow: hidden; background-color: #eaeaea; aspect-ratio: 16/10; }
+        .img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        .img-wrapper::after {
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); pointer-events: none;
+        }
+
+        .room-label {
+            position: absolute; bottom: 20px; left: 25px; font-family: var(--font-body);
+            font-size: 0.9rem; color: #ffffff; z-index: 10; letter-spacing: 2px; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Mobile Adjustments for Viewer */
+        @media (max-width: 900px) {
+            .viewer-grid { grid-template-columns: 1fr; }
+            .span-full { grid-column: span 1; }
+            .btn-back { top: 15px; font-size: 0.7rem; padding: 8px 15px; }
+            .viewer-header { padding-top: 100px; }
+            .viewer-header h2 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION (Header script placeholder) -->
+    <div id="header-placeholder"></div>
+
+    <!-- HEADER -->
+    <header class="portfolio-header">
+        <h1>Projects</h1>
+        <p>A curated collection of our finest spaces. Spaces composed with intention and restraint.</p>
+    </header>
+
+    <!-- MAIN GALLERY CARDS (Auto-generated by JS) -->
+    <div class="gallery-container" id="main-gallery-container">
+        <!-- JS will inject categorized grids here -->
+    </div>
+
+    <!-- DYNAMIC PROJECT VIEWER OVERLAY -->
+    <div id="dynamic-viewer">
+        <button class="btn-back" onclick="closeProject()">← Back to Projects</button>
+        
+        <div class="viewer-header">
+            <h2 id="viewer-title">Project Title</h2>
+            <p id="viewer-subtitle">Project Subtitle</p>
+        </div>
+        
+        <div id="viewer-content"></div>
+    </div>
+
+    <!-- JAVASCRIPT DATA MAP & LOGIC -->
+    <script>
+        let projectData = {};
+
+        // 1. Fetch the JSON file
+        fetch('portfolio_data.json')
+            .then(response => response.json())
+            .then(data => {
+                projectData = { ...data.RESIDENTIAL, ...data.RETAIL, ...data.COMMERCIAL };
+                
+                const galleryContainer = document.getElementById('main-gallery-container');
+                galleryContainer.innerHTML = ''; 
+
+                const categories = ['RESIDENTIAL', 'COMMERCIAL', 'RETAIL'];
+
+                categories.forEach(category => {
+                    if (data[category] && Object.keys(data[category]).length > 0) {
+                        
+                        // Category Title
+                        const catTitle = document.createElement('h2');
+                        catTitle.className = 'category-title';
+                        catTitle.innerText = category;
+                        galleryContainer.appendChild(catTitle);
+
+                        // Grid (Reusing the .projects-grid class from style.css!)
+                        const grid = document.createElement('div');
+                        grid.className = 'projects-grid';
+
+                        // Generate Cards
+                        for (const [id, proj] of Object.entries(data[category])) {
+                            if (proj.images && proj.images.length > 0) {
+                                const card = document.createElement('div');
+                                // Reusing the global card classes
+                                card.className = 'project-card';
+                                card.onclick = () => openProject(id);
+
+                                const thumbSrc = proj.thumbnail ? proj.thumbnail : 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=80';
+                                
+                                // Format Location and Tagline 
+                                const locationHTML = proj.location ? `<p class="proj-loc">${proj.location}</p>` : '';
+                                const taglineText = proj.tagline ? proj.tagline : category;
+                                const taglineHTML = `<p class="proj-tag">${taglineText}</p>`;
+
+                                card.innerHTML = `
+                                    <img src="${thumbSrc}" alt="${proj.title}" loading="lazy">
+                                    <div class="project-overlay">
+                                        <h3>${proj.title}</h3>
+                                        ${locationHTML}
+                                        ${taglineHTML}
+                                    </div>
+                                `;
+                                grid.appendChild(card);
+                            }
+                        }
+                        galleryContainer.appendChild(grid);
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading portfolio data:', error));
+
+        // 2. Render the Project inside the Viewer
+        // 2. Render the Project inside the Viewer
+        function openProject(projectId) {
+            const data = projectData[projectId];
+            if (!data) return; 
+
+            document.getElementById('viewer-title').innerText = data.title;
+            
+            // New logic to display location and tagline on separate lines
+            const viewerSubtitle = document.getElementById('viewer-subtitle');
+            
+            if (data.location && data.tagline) {
+                // Location on top, Tagline italicized below it
+                viewerSubtitle.innerHTML = `
+                    <span style="display:block; letter-spacing: 2px;">${data.location}</span>
+                    <span style="display:block; font-style: italic; text-transform: none; margin-top: 5px; font-size: 0.9em; opacity: 0.8;">${data.tagline}</span>
+                `;
+            } else if (data.tagline) {
+                viewerSubtitle.innerHTML = `<span>${data.tagline}</span>`;
+            } else if (data.location) {
+                viewerSubtitle.innerHTML = `<span>${data.location}</span>`;
+            } else {
+                viewerSubtitle.innerText = "Project Overview";
+            }
+
+            const viewerContent = document.getElementById('viewer-content');
+            
+            viewerContent.innerHTML = ''; 
+
+            const groups = {};
+            data.images.forEach(imgData => {
+                let groupName = imgData.label;
+                if (/^\d+$/.test(groupName.trim()) || /^Img/i.test(groupName.trim())) {
+                    groupName = "Project Gallery";
+                }
+                if (!groups[groupName]) groups[groupName] = [];
+                groups[groupName].push(imgData);
+            });
+
+            for (const [groupName, images] of Object.entries(groups)) {
+                const section = document.createElement('div');
+                section.className = 'room-section';
+                
+                if (groupName !== "Project Gallery" && groupName !== "Project Video") {
+                    const heading = document.createElement('h3');
+                    heading.className = 'room-heading';
+                    heading.innerText = groupName;
+                    section.appendChild(heading);
+                }
+
+                const grid = document.createElement('div');
+                grid.className = 'viewer-grid';
+
+                images.forEach((imgData, index) => {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'img-wrapper';
+
+                    // Make the first image of a large set span full width
+                    if (index === 0 && images.length > 2) {
+                        wrapper.classList.add('span-full');
+                    }
+
+                    // Check if it's a Video (like Poonam Cluster ending)
+                    if(imgData.src.toLowerCase().endsWith('.mp4')) {
+                        wrapper.classList.add('span-full');
+                        wrapper.innerHTML = `
+                            <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                                <source src="${imgData.src}" type="video/mp4">
+                            </video>
+                            <span class="room-label">Project Video</span>
+                        `;
+                    } else {
+                        // Standard Image
+                        wrapper.innerHTML = `
+                            <img src="${imgData.src}" alt="${imgData.label}" loading="lazy">
+                            <span class="room-label">${imgData.label}</span>
+                        `;
+                    }
+
+                    grid.appendChild(wrapper);
+                });
+
+                section.appendChild(grid);
+                viewerContent.appendChild(section);
+            }
+
+            const viewer = document.getElementById('dynamic-viewer');
+            viewer.classList.add('active');
+            viewer.scrollTop = 0; 
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        // 3. Close Viewer Function
+        function closeProject() {
+            document.getElementById('dynamic-viewer').classList.remove('active');
+            document.body.style.overflow = 'auto'; 
+        }
+    </script>
+    
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+    <script src="components.js"></script>
+</body>
+</html>
+>>>>>>> ad4204b2c7229ab17af88abeff76f495488cac37

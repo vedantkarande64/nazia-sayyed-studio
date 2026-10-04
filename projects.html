@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Nazia Sayyed Studio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CORE VARIABLES --- */
+        :root {
+            --bg-color: #F8EBE2; 
+            --accent: #4A4542; 
+            --text-dark: #2C2A29; 
+            --font-brand: 'Belleza', sans-serif;
+            --font-body: 'EB Garamond', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- SCROLL ANIMATION --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background-color: rgba(248, 235, 226, 0.98); 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 40px; 
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .logo, .nav-links a, .btn-nav-contact {
+            color: var(--text-dark); 
+        }
+
+        .logo {
+            font-family: var(--font-brand);
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .btn-nav-contact {
+            font-family: var(--font-brand);
+            font-size: 1rem;
+            border-bottom: 1px solid var(--text-dark); 
+            padding-bottom: 2px;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -3px;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* --- PORTFOLIO HEADER --- */
+        .portfolio-header {
+            padding: 180px 5% 80px;
+            text-align: center;
+        }
+
+        .portfolio-header h1 {
+            font-family: var(--font-brand);
+            font-size: 3.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .portfolio-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-dark);
+        }
+
+        /* --- CATEGORY TITLES --- */
+        .category-title {
+            font-family: var(--font-brand);
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 80px 0 20px;
+            padding-bottom: 15px;
+            color: var(--accent);
+            position: relative;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        /* --- PROJECT BLOCKS --- */
+        .project-block {
+            padding: 60px 5% 40px;
+            border-bottom: 1px solid rgba(74, 69, 66, 0.1);
+        }
+        
+        .project-block:last-of-type {
+            border-bottom: none;
+        }
+
+        .project-title {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .project-title h3 {
+            font-family: var(--font-brand);
+            font-size: 2rem;
+            color: var(--text-dark);
+        }
+
+        .project-title p {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* --- IMAGE GRIDS --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* Makes the first image full width to break the grid elegantly */
+        .project-grid .img-wrapper:first-child {
+            grid-column: span 2;
+        }
+
+        /* Utility class to span full width for videos or specific images */
+        .span-full {
+            grid-column: span 2;
+        }
+
+        .img-wrapper {
+            position: relative;
+            overflow: hidden;
+            background-color: #e3d8d1; /* Placeholder loading color */
+            aspect-ratio: 16/10;
+        }
+
+        .img-wrapper img, .img-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+
+        .img-wrapper:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Dark gradient overlay at the bottom so text always pops */
+        .img-wrapper::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 40%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            pointer-events: none;
+        }
+
+        /* --- ROOM LABELS (Bottom Left) --- */
+        .room-label {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            font-family: var(--font-brand);
+            font-size: 1.2rem;
+            color: #ffffff;
+            z-index: 10;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--accent);
+            color: var(--bg-color);
+            padding: 80px 5% 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            margin-top: 100px;
+        }
+
+        footer h4 {
+            font-family: var(--font-brand);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links p, .footer-links a {
+            color: #d5d0cd;
+            margin-bottom: 10px;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .project-grid { grid-template-columns: 1fr; }
+            .project-grid .img-wrapper:first-child, .span-full { grid-column: span 1; }
+            footer { grid-template-columns: 1fr; }
+            .portfolio-header h1 { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <a href="index.html" class="logo">Nazia Sayyed Studio</a>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="#">Services</a>
+            </div>
+            <a href="#" class="btn-nav-contact">Get in Touch</a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="portfolio-header reveal">
+        <h1>Featured Projects</h1>
+        <p>A curated collection of our finest residential, retail, and commercial spaces. Each project is a testament to timeless design and meticulous craftsmanship.</p>
+    </header>
+
+    <!-- ==============================================
+         RESIDENTIAL SECTION (10 Projects)
+    =============================================== -->
+    <h2 class="category-title reveal">Residential</h2>
+
+    <!-- 1. Oberoi Skycity -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>Oberoi Skycity — Borivali</h3>
+            <p>Minimal Luxury at its Best (Pending)</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80" alt="Living Room"><span class="room-label">Living Room</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80" alt="Master Bedroom & Bath"><span class="room-label">Master Bedroom & Bath</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Other Rooms"><span class="room-label">Other Rooms</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" alt="Kitchen"><span class="room-label">Kitchen</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80" alt="Washrooms"><span class="room-label">Washrooms</span></div>
+        </div>
+    </section>
+
+    <!-- 2. Supreme 19 -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>Supreme 19 — Lokhandwala</h3>
+            <p>Devil Wears Prada</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80" alt="Living Room"><span class="room-label">Living Room</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80" alt="Master Bedroom & Bath"><span class="room-label">Master Bedroom & Bath</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Other Rooms"><span class="room-label">Other Rooms</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" alt="Kitchen"><span class="room-label">Kitchen</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80" alt="Washrooms"><span class="room-label">Washrooms</span></div>
+        </div>
+    </section>
+
+    <!-- 3. Khese Park -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>Khese Park — Pune</h3>
+            <p>Slow Living</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80" alt="Living Room"><span class="room-label">Living Room</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80" alt="Master Bedroom & Bath"><span class="room-label">Master Bedroom & Bath</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Other Rooms"><span class="room-label">Other Rooms</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" alt="Kitchen"><span class="room-label">Kitchen</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80" alt="Washrooms"><span class="room-label">Washrooms</span></div>
+        </div>
+    </section>
+
+    <!-- 4. Platina -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>Platina — Mira Road</h3>
+            <p>An Art of Coming Home</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80" alt="Living Room"><span class="room-label">Living Room</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80" alt="Master Bedroom & Bath"><span class="room-label">Master Bedroom & Bath</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Other Rooms"><span class="room-label">Other Rooms</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" alt="Kitchen"><span class="room-label">Kitchen</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80" alt="Washrooms"><span class="room-label">Washrooms</span></div>
+        </div>
+    </section>
+
+    <!-- 5. Arkade Art -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>Arkade Art — Goregaon</h3>
+            <p>A Joy Nest</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80" alt="Living Room"><span class="room-label">Living Room</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80" alt="Master Bedroom & Bath"><span class="room-label">Master Bedroom & Bath</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Other Rooms"><span class="room-label">Other Rooms</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" alt="Kitchen"><span class="room-label">Kitchen</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80" alt="Washrooms"><span class="room-label">Washrooms</span></div>
+        </div>
+    </section>
+
+    <!-- 6. Poonam Cluster (With Video) -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>Poonam Cluster — Mira Road</h3>
+            <p>A Cosy Affair</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80" alt="Living Room"><span class="room-label">Living Room</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=800&q=80" alt="Master Bedroom & Bath"><span class="room-label">Master Bedroom & Bath</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=800&q=80" alt="Other Rooms"><span class="room-label">Other Rooms</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1556185781-a47769abb7ee?w=800&q=80" alt="Kitchen"><span class="room-label">Kitchen</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80" alt="Washrooms"><span class="room-label">Washrooms</span></div>
+            <div class="img-wrapper span-full">
+                <!-- Video Walkthrough -->
+                <video autoplay loop muted playsinline>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                </video>
+                <span class="room-label">Project Walkthrough</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Epsilon -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>Epsilon — Kandivali</h3>
+            <p>Project Home</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80" alt="Living Room"><span class="room-label">Living Room</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80" alt="Master Bedroom & Bath"><span class="room-label">Master Bedroom & Bath</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Other Rooms"><span class="room-label">Other Rooms</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" alt="Kitchen"><span class="room-label">Kitchen</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80" alt="Washrooms"><span class="room-label">Washrooms</span></div>
+        </div>
+    </section>
+
+    <!-- 8. Ambrosia -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>Ambrosia — Borivali</h3>
+            <p>Peaceful Nest (Pending)</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80" alt="Living Room"><span class="room-label">Living Room</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80" alt="Master Bedroom & Bath"><span class="room-label">Master Bedroom & Bath</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Other Rooms"><span class="room-label">Other Rooms</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" alt="Kitchen"><span class="room-label">Kitchen</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80" alt="Washrooms"><span class="room-label">Washrooms</span></div>
+        </div>
+    </section>
+
+    <!-- 9. Kaatyani Heights -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>Kaatyani — Andheri</h3>
+            <p>Art of Perfection</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80" alt="Living Room"><span class="room-label">Living Room</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80" alt="Master Bedroom & Bath"><span class="room-label">Master Bedroom & Bath</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Other Rooms"><span class="room-label">Other Rooms</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" alt="Kitchen"><span class="room-label">Kitchen</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80" alt="Washrooms"><span class="room-label">Washrooms</span></div>
+        </div>
+    </section>
+
+    <!-- 10. Jayant Heritage -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>Jayant Heritage — Charni Road</h3>
+            <p>In remembrance of Mr. Shah</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80" alt="Living Room"><span class="room-label">Living Room</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80" alt="Master Bedroom & Bath"><span class="room-label">Master Bedroom & Bath</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Other Rooms"><span class="room-label">Other Rooms</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" alt="Kitchen"><span class="room-label">Kitchen</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80" alt="Washrooms"><span class="room-label">Washrooms</span></div>
+        </div>
+    </section>
+
+
+    <!-- ==============================================
+         RETAIL SECTION (3 Projects)
+    =============================================== -->
+    <h2 class="category-title reveal">Retail</h2>
+
+    <!-- 1. Aisraa -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>Aisra — Kandivali</h3>
+            <p>A Heritage Loom</p>
+        </div>
+        <!-- Using a 3-image grid for retail spaces -->
+        <div class="project-grid">
+            <div class="img-wrapper span-full"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80" alt="Retail Display"><span class="room-label">Main Display</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80" alt="Store Interior"><span class="room-label">Store Interior</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&q=80" alt="Details"><span class="room-label">Details</span></div>
+        </div>
+    </section>
+
+    <!-- 2. MRY Gems -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>MRY Gems — Oman</h3>
+            <p>In the world of Gems</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper span-full"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80" alt="Retail Display"><span class="room-label">Main Display</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80" alt="Store Interior"><span class="room-label">Store Interior</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&q=80" alt="Details"><span class="room-label">Details</span></div>
+        </div>
+    </section>
+
+    <!-- 3. Gulf Jewellery -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>Gulf Jewellery — Oman</h3>
+            <p>A Legacy Venture</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper span-full"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80" alt="Retail Display"><span class="room-label">Main Display</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800&q=80" alt="Store Interior"><span class="room-label">Store Interior</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&q=80" alt="Details"><span class="room-label">Details</span></div>
+        </div>
+    </section>
+
+
+    <!-- ==============================================
+         COMMERCIAL SECTION (2 Projects)
+    =============================================== -->
+    <h2 class="category-title reveal">Commercial</h2>
+
+    <!-- 1. MRL Group -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>MRL — Charni Road</h3>
+            <p>Boss Energy</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper span-full"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80" alt="Office Space"><span class="room-label">Executive Suite</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80" alt="Conference Room"><span class="room-label">Conference Room</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1497215898147-5dd5f1569faa?w=800&q=80" alt="Work Area"><span class="room-label">Work Area</span></div>
+        </div>
+    </section>
+
+    <!-- 2. Mohil's Office -->
+    <section class="project-block reveal">
+        <div class="project-title">
+            <h3>Mohil's Office — Borivali</h3>
+            <p>Calm in Chaos</p>
+        </div>
+        <div class="project-grid">
+            <div class="img-wrapper span-full"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80" alt="Office Space"><span class="room-label">Executive Suite</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80" alt="Conference Room"><span class="room-label">Conference Room</span></div>
+            <div class="img-wrapper"><img src="https://images.unsplash.com/photo-1497215898147-5dd5f1569faa?w=800&q=80" alt="Work Area"><span class="room-label">Work Area</span></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-links">
+            <h4>Nazia Sayyed Studio</h4>
+            <p>Goregaon East, Mumbai</p>
+        </div>
+        <div class="footer-links">
+            <h4>Contact</h4>
+            <a href="tel:+919960578360">+91 9960578360</a>
+            <a href="mailto:info@naziasayyed.com">info@naziasayyed.com</a>
+            <p>20th Floor, Oberoi Commerz II,<br>Off WEH, Mumbai – 400063</p>
+        </div>
+        <div class="footer-links">
+            <h4>Connect</h4>
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#">WhatsApp</a>
+        </div>
+    </footer>
+
+    <!-- JS for Animations -->
+    <script>
+        function revealElements() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', revealElements);
+        // Trigger once on load
+        revealElements();
+    </script>
+</body>
+</html>
