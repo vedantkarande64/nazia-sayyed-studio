@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nazia Sayyed Studio | Luxury Interior Design</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head>
+<body class="homepage">
+<div id="header-placeholder"></div>
+<header class="hero">
+  <div class="hero-overlay"></div><video autoplay loop muted playsinline class="hero-video"><source src="Images/coverpage.mp4" type="video/mp4"></video>
+  <div class="hero-content-left">
+    <div class="eyebrow hero-kicker">INTERIORS<br>WITH INTENTION</div>
+    <h1 class="hero-title">SPACES<br>THAT<br>BELONG</h1>
+    <div class="hero-buttons"><a class="btn-solid" href="portfolio.html">EXPLORE OUR WORK →</a><a class="btn-outline" href="#contact-us">ENQUIRE</a></div>
+  </div>
+  <div class="hero-side-note">PEOPLE<br>PLACES<br>LIFESTYLE<br>INTERIORS</div>
+</header>
+
+<main>
+<section class="section"><div class="container home-studio">
+  <div class="home-studio-copy reveal"><div class="rule-title">THE STUDIO</div><h2 class="home-studio-title">Nazia Sayyed Studio is a luxury interior design practice creating refined, distinctive interiors shaped by proportion, materiality and detail.</h2><p>Each project is developed with a considered approach to composition, craftsmanship, colour, texture and light—creating interiors that feel sophisticated, cohesive and deeply individual.</p><a class="arrow-link" href="about.html">DISCOVER THE STUDIO</a></div>
+  <div class="home-studio-image reveal"><img src="Images/RESIDENTIAL/6. POONAM CLUSTER/1. LIVING ROOM/1.jpg" alt="Nazia Sayyed Studio interior" loading="lazy"></div>
+</div></section>
+
+<section class="section projects-section"><div class="container"><div class="section-heading"><h2>FEATURED WORK</h2><a class="arrow-link" href="portfolio.html">VIEW ALL PROJECTS</a></div><div class="projects-grid" id="featured-projects-grid"></div></div></section>
+
+<section class="section services-section"><div class="container"><div class="section-heading"><h2>OUR SERVICES</h2><a class="arrow-link" href="services.html">LEARN MORE</a></div><div class="services-strip">
+ <article class="service-mini"><span class="num">01</span><h3>INTERIOR<br>TURNKEY SOLUTION</h3><p>End-to-end execution, from concept development to completion.</p></article>
+ <article class="service-mini"><span class="num">02</span><h3>INTERIOR<br>CONSULTANCY</h3><p>Strategic design guidance tailored to your space and vision.</p></article>
+ <article class="service-mini"><span class="num">03</span><h3>INTERIOR<br>STYLING</h3><p>Considered curation of furniture, lighting, artwork and accessories.</p></article>
+</div></div></section>
+
+<section class="section instagram-section"><div class="container"><div class="instagram-header"><h2>INSTAGRAM</h2><a href="https://www.instagram.com/naziasayyedstudio/" target="_blank" rel="noopener">FOLLOW @NAZIASAYYEDSTUDIO →</a></div><div class="instagram-grid">
+<a href="https://www.instagram.com/naziasayyedstudio/" target="_blank"><img src="Images/RESIDENTIAL/1. OBEROI SKYCITY/1. LIVING ROOM/1.jpg" alt="Studio interior"></a><a href="https://www.instagram.com/naziasayyedstudio/" target="_blank"><img src="Images/RESIDENTIAL/4. PLATINA/1. LIVING ROOM/1.JPG" alt="Studio interior"></a><a href="https://www.instagram.com/naziasayyedstudio/" target="_blank"><img src="Images/RESIDENTIAL/5. ARKADE ART/1. LIVING ROOM/1.jpg" alt="Studio interior"></a><a href="https://www.instagram.com/naziasayyedstudio/" target="_blank"><img src="Images/RESIDENTIAL/6. POONAM CLUSTER/1. LIVING ROOM/1.jpg" alt="Studio interior"></a><a href="https://www.instagram.com/naziasayyedstudio/" target="_blank"><img src="Images/RETAIL/1. AISRAA/1.jpg" alt="Retail interior"></a><a href="https://www.instagram.com/naziasayyedstudio/" target="_blank"><img src="Images/COMMERCIAL/2. CA'S OFFICE/ARTWORK.JPG" alt="Commercial interior"></a>
+</div></div></section>
+
+<section class="testimonials-section"><div class="testimonial-slider-container"><div class="rule-title" style="justify-content:center;margin-bottom:25px">CLIENT TESTIMONIALS</div><div class="testimonial-slider" id="testimonial-slider"><div class="testimonial-slide"><p class="quote">“Working with Nazia was an exceptional experience. She understood our needs instantly and translated them into a space that feels like home.”</p><p class="author">PRIVATE CLIENT — MUMBAI</p></div><div class="testimonial-slide"><p class="quote">“The attention to detail and ability to capture our vision was extraordinary. A seamless process.”</p><p class="author">PRIVATE CLIENT — MUMBAI</p></div><div class="testimonial-slide"><p class="quote">“A truly luxurious experience from concept to final handover. Our home is a work of art.”</p><p class="author">PRIVATE CLIENT — MUMBAI</p></div></div><div class="slider-dots"><span class="dot active" onclick="goToSlide(0)"></span><span class="dot" onclick="goToSlide(1)"></span><span class="dot" onclick="goToSlide(2)"></span></div></div></section>
+</main>
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+<script>
+function revealElements(){document.querySelectorAll('.reveal').forEach(el=>{if(el.getBoundingClientRect().top<innerHeight-70)el.classList.add('active')})} addEventListener('scroll',revealElements,{passive:true}); revealElements();
+fetch('portfolio_data.json').then(r=>r.json()).then(data=>{const grid=document.getElementById('featured-projects-grid');let all=[];['RESIDENTIAL','COMMERCIAL','RETAIL'].forEach(cat=>Object.entries(data[cat]||{}).forEach(([id,p])=>all.push({id,...p,category:cat})));all.slice(0,6).forEach(p=>{const card=document.createElement('a');card.className='project-card reveal active';card.href=`portfolio.html?project=${encodeURIComponent(p.id)}`;card.innerHTML=`<img src="${p.thumbnail}" alt="${p.title}" loading="lazy"><div class="project-overlay"><h3>${p.title}</h3>${p.location?`<p class="proj-loc">${p.location}</p>`:''}<p class="proj-tag">${p.tagline||p.category}</p></div>`;grid.appendChild(card)})}).catch(console.error);
+let currentSlideIndex=0;const slider=document.getElementById('testimonial-slider'),dots=document.querySelectorAll('.slider-dots .dot');function updateSlider(){slider.style.transform=`translateX(-${currentSlideIndex*100}%)`;dots.forEach((d,i)=>d.classList.toggle('active',i===currentSlideIndex))}function goToSlide(i){currentSlideIndex=i;updateSlider();clearInterval(slideTimer);slideTimer=setInterval(nextSlide,6000)}function nextSlide(){currentSlideIndex=(currentSlideIndex+1)%3;updateSlider()}let slideTimer=setInterval(nextSlide,6000);
+</script></body></html>

@@ -1,0 +1,840 @@
+{
+    "COMMERCIAL": {
+        "mrl-group": {
+            "title": "MRL Group",
+            "location": "Charni Road",
+            "tagline": "Boss Energy",
+            "thumbnail": "Images/COMMERCIAL/1. MRL GROUP/BOSS'S DESK.jpg",
+            "images": [
+                {
+                    "label": "BOSS'S DESK",
+                    "src": "Images/COMMERCIAL/1. MRL GROUP/BOSS'S DESK.jpg"
+                },
+                {
+                    "label": "BOSS'S OFFICE",
+                    "src": "Images/COMMERCIAL/1. MRL GROUP/BOSS'S OFFICE.jpg"
+                },
+                {
+                    "label": "LIBRARY",
+                    "src": "Images/COMMERCIAL/1. MRL GROUP/LIBRARY.jpg"
+                },
+                {
+                    "label": "SEATING",
+                    "src": "Images/COMMERCIAL/1. MRL GROUP/SEATING.jpg"
+                },
+                {
+                    "label": "WASHROOM ENTRANCE",
+                    "src": "Images/COMMERCIAL/1. MRL GROUP/WASHROOM ENTRANCE.jpg"
+                }
+            ]
+        },
+        "ca's-office": {
+            "title": "CA's Office",
+            "location": "",
+            "tagline": "",
+            "thumbnail": "Images/COMMERCIAL/2. CA'S OFFICE/ARTWORK.JPG",
+            "images": [
+                {
+                    "label": "ARTWORK",
+                    "src": "Images/COMMERCIAL/2. CA'S OFFICE/ARTWORK.JPG"
+                },
+                {
+                    "label": "CABIN 1",
+                    "src": "Images/COMMERCIAL/2. CA'S OFFICE/CABIN 1.JPG"
+                },
+                {
+                    "label": "CABIN 2",
+                    "src": "Images/COMMERCIAL/2. CA'S OFFICE/CABIN 2.JPG"
+                },
+                {
+                    "label": "CABIN WALL PANELING",
+                    "src": "Images/COMMERCIAL/2. CA'S OFFICE/CABIN WALL PANELING.JPG"
+                },
+                {
+                    "label": "ENTRANCE",
+                    "src": "Images/COMMERCIAL/2. CA'S OFFICE/ENTRANCE.JPG"
+                },
+                {
+                    "label": "MEZZANINE FLOOR",
+                    "src": "Images/COMMERCIAL/2. CA'S OFFICE/MEZZANINE FLOOR.JPG"
+                },
+                {
+                    "label": "OVERALL AESTHETICS",
+                    "src": "Images/COMMERCIAL/2. CA'S OFFICE/OVERALL AESTHETICS.JPG"
+                },
+                {
+                    "label": "SEATING",
+                    "src": "Images/COMMERCIAL/2. CA'S OFFICE/SEATING.JPG"
+                },
+                {
+                    "label": "WORKSTATION",
+                    "src": "Images/COMMERCIAL/2. CA'S OFFICE/WORKSTATION.JPG"
+                }
+            ]
+        }
+    },
+    "RESIDENTIAL": {
+        "oberoi-skycity": {
+            "title": "Oberoi Skycity",
+            "location": "Borivali",
+            "tagline": "Minimal Luxury at its Best - Pending",
+            "thumbnail": "Images/RESIDENTIAL/1. OBEROI SKYCITY/1. LIVING ROOM/1.jpg",
+            "images": [
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/1. LIVING ROOM/1.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/1. LIVING ROOM/2.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/1. LIVING ROOM/3.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/1. LIVING ROOM/4.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/1. LIVING ROOM/5.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM AND MASTER BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/2. MASTER BEDROOM AND MASTER BATH/1.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM AND MASTER BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/2. MASTER BEDROOM AND MASTER BATH/2.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM AND MASTER BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/2. MASTER BEDROOM AND MASTER BATH/3.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM AND MASTER BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/2. MASTER BEDROOM AND MASTER BATH/4.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM AND MASTER BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/2. MASTER BEDROOM AND MASTER BATH/5.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM AND MASTER BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/2. MASTER BEDROOM AND MASTER BATH/6.jpg"
+                },
+                {
+                    "label": "PARENTS ROOM AND PARENTS BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/3. PARENTS ROOM AND PARENTS BATH/1.jpg"
+                },
+                {
+                    "label": "PARENTS ROOM AND PARENTS BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/3. PARENTS ROOM AND PARENTS BATH/2.jpg"
+                },
+                {
+                    "label": "PARENTS ROOM AND PARENTS BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/3. PARENTS ROOM AND PARENTS BATH/3.jpg"
+                },
+                {
+                    "label": "PARENTS ROOM AND PARENTS BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/3. PARENTS ROOM AND PARENTS BATH/4.jpg"
+                },
+                {
+                    "label": "PARENTS ROOM AND PARENTS BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/3. PARENTS ROOM AND PARENTS BATH/5.jpg"
+                },
+                {
+                    "label": "KIDS ROOM AND COMMON BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/4. KIDS ROOM AND COMMON BATH/1.jpg"
+                },
+                {
+                    "label": "KIDS ROOM AND COMMON BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/4. KIDS ROOM AND COMMON BATH/2.jpg"
+                },
+                {
+                    "label": "KIDS ROOM AND COMMON BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/4. KIDS ROOM AND COMMON BATH/3.jpg"
+                },
+                {
+                    "label": "KIDS ROOM AND COMMON BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/4. KIDS ROOM AND COMMON BATH/4.jpg"
+                },
+                {
+                    "label": "KIDS ROOM AND COMMON BATH",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/4. KIDS ROOM AND COMMON BATH/5.jpg"
+                },
+                {
+                    "label": "KITCHEN",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/5. KITCHEN/1.jpg"
+                },
+                {
+                    "label": "KITCHEN",
+                    "src": "Images/RESIDENTIAL/1. OBEROI SKYCITY/5. KITCHEN/2.jpg"
+                }
+            ]
+        },
+        "supreme-19": {
+            "title": "Supreme 19",
+            "location": "Lokhandwala",
+            "tagline": "Devil Wears Prada",
+            "thumbnail": "Images/RESIDENTIAL/2. SUPREME 19/KIDS ROOM/1.jpg",
+            "images": [
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/2. SUPREME 19/LIVING ROOM/1.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/2. SUPREME 19/LIVING ROOM/2.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM 1",
+                    "src": "Images/RESIDENTIAL/2. SUPREME 19/MASTER BEDROOM 1/1.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM 1",
+                    "src": "Images/RESIDENTIAL/2. SUPREME 19/MASTER BEDROOM 1/2.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM 1",
+                    "src": "Images/RESIDENTIAL/2. SUPREME 19/MASTER BEDROOM 1/3.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM 1",
+                    "src": "Images/RESIDENTIAL/2. SUPREME 19/MASTER BEDROOM 1/4.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM 2",
+                    "src": "Images/RESIDENTIAL/2. SUPREME 19/MASTER BEDROOM 2/1.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM 2",
+                    "src": "Images/RESIDENTIAL/2. SUPREME 19/MASTER BEDROOM 2/2.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM 2",
+                    "src": "Images/RESIDENTIAL/2. SUPREME 19/MASTER BEDROOM 2/3.jpg"
+                },
+                {
+                    "label": "KIDS ROOM",
+                    "src": "Images/RESIDENTIAL/2. SUPREME 19/KIDS ROOM/1.jpg"
+                }
+            ]
+        },
+        "khese-park": {
+            "title": "Khese Park",
+            "location": "Pune",
+            "tagline": "Slow Living",
+            "thumbnail": "Images/RESIDENTIAL/3. KHESE PARK/1. LIVING ROOM/1.jpg",
+            "images": [
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/3. KHESE PARK/1. LIVING ROOM/1.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/3. KHESE PARK/1. LIVING ROOM/2.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/3. KHESE PARK/1. LIVING ROOM/3.jpg"
+                },
+                {
+                    "label": "DINING",
+                    "src": "Images/RESIDENTIAL/3. KHESE PARK/2. DINING/1.jpg"
+                },
+                {
+                    "label": "AESTHETICS",
+                    "src": "Images/RESIDENTIAL/3. KHESE PARK/AESTHETICS/1.jpg"
+                },
+                {
+                    "label": "AESTHETICS",
+                    "src": "Images/RESIDENTIAL/3. KHESE PARK/AESTHETICS/2.jpg"
+                },
+                {
+                    "label": "AESTHETICS",
+                    "src": "Images/RESIDENTIAL/3. KHESE PARK/AESTHETICS/3.jpg"
+                }
+            ]
+        },
+        "platina": {
+            "title": "Platina",
+            "location": "Mira Road",
+            "tagline": "An Art of Coming Home",
+            "thumbnail": "Images/RESIDENTIAL/4. PLATINA/1. LIVING ROOM/1.JPG",
+            "images": [
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/1. LIVING ROOM/1.JPG"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/1. LIVING ROOM/2.JPG"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/1. LIVING ROOM/3.JPG"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/1. LIVING ROOM/4.JPG"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/1. LIVING ROOM/5.JPG"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/2. MASTER BEDROOM/1.PNG"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/2. MASTER BEDROOM/2.PNG"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/2. MASTER BEDROOM/3.PNG"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/2. MASTER BEDROOM/4.JPG"
+                },
+                {
+                    "label": "LOUNGE ROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/3. LOUNGE ROOM/1.JPG"
+                },
+                {
+                    "label": "LOUNGE ROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/3. LOUNGE ROOM/2.JPG"
+                },
+                {
+                    "label": "LOUNGE ROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/3. LOUNGE ROOM/3.JPG"
+                },
+                {
+                    "label": "LOUNGE ROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/3. LOUNGE ROOM/4.JPG"
+                },
+                {
+                    "label": "LOUNGE ROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/3. LOUNGE ROOM/5.JPG"
+                },
+                {
+                    "label": "LOUNGE ROOM",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/3. LOUNGE ROOM/6.JPG"
+                },
+                {
+                    "label": "KITCHEN",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/4. KITCHEN/1.jpg"
+                },
+                {
+                    "label": "KITCHEN",
+                    "src": "Images/RESIDENTIAL/4. PLATINA/4. KITCHEN/2.jpg"
+                }
+            ]
+        },
+        "arkade-art": {
+            "title": "Arkade Art",
+            "location": "Goregaon",
+            "tagline": "A Joy Nest",
+            "thumbnail": "Images/RESIDENTIAL/5. ARKADE ART/1. LIVING ROOM/1.jpg",
+            "images": [
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/1. LIVING ROOM/1.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/1. LIVING ROOM/10.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/1. LIVING ROOM/2.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/1. LIVING ROOM/3.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/1. LIVING ROOM/4.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/1. LIVING ROOM/5.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/1. LIVING ROOM/6.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/1. LIVING ROOM/7.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/1. LIVING ROOM/8.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/1. LIVING ROOM/9.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM 1",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/2. MASTER BEDROOM 1/father bedroom _cam01.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM 1",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/2. MASTER BEDROOM 1/father bedroom _cam02.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM 2",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/3. MASTER BEDROOM 2/1.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM 2",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/3. MASTER BEDROOM 2/2.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM 2",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/3. MASTER BEDROOM 2/3.jpg"
+                },
+                {
+                    "label": "SON'S ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/4. SON'S ROOM/1.jpg"
+                },
+                {
+                    "label": "SON'S ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/4. SON'S ROOM/2.jpg"
+                },
+                {
+                    "label": "SON'S ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/4. SON'S ROOM/3.jpg"
+                },
+                {
+                    "label": "DAUGHTER'S ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/5. DAUGHTER'S ROOM/1.jpg"
+                },
+                {
+                    "label": "DAUGHTER'S ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/5. DAUGHTER'S ROOM/2.jpg"
+                },
+                {
+                    "label": "DAUGHTER'S ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/5. DAUGHTER'S ROOM/3.jpg"
+                },
+                {
+                    "label": "DAUGHTER'S ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/5. DAUGHTER'S ROOM/4.jpg"
+                },
+                {
+                    "label": "GUEST ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/6. GUEST ROOM/1.jpg"
+                },
+                {
+                    "label": "GUEST ROOM",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/6. GUEST ROOM/2.jpg"
+                },
+                {
+                    "label": "KITCHEN",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/7. KITCHEN/1.jpg"
+                },
+                {
+                    "label": "KITCHEN",
+                    "src": "Images/RESIDENTIAL/5. ARKADE ART/7. KITCHEN/2.jpg"
+                }
+            ]
+        },
+        "poonam-cluster": {
+            "title": "Poonam Cluster",
+            "location": "Mira Road",
+            "tagline": "A Cosy Affair",
+            "thumbnail": "Images/RESIDENTIAL/6. POONAM CLUSTER/1. LIVING ROOM/1.jpg",
+            "images": [
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/1. LIVING ROOM/1.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/1. LIVING ROOM/2.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/1. LIVING ROOM/3.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/1. LIVING ROOM/4.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM & MASTER BATH",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/2. MASTER BEDROOM & MASTER BATH/1.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM & MASTER BATH",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/2. MASTER BEDROOM & MASTER BATH/10.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM & MASTER BATH",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/2. MASTER BEDROOM & MASTER BATH/2.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM & MASTER BATH",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/2. MASTER BEDROOM & MASTER BATH/3.JPG"
+                },
+                {
+                    "label": "MASTER BEDROOM & MASTER BATH",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/2. MASTER BEDROOM & MASTER BATH/5.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM & MASTER BATH",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/2. MASTER BEDROOM & MASTER BATH/6.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM & MASTER BATH",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/2. MASTER BEDROOM & MASTER BATH/7.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM & MASTER BATH",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/2. MASTER BEDROOM & MASTER BATH/8.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM & MASTER BATH",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/2. MASTER BEDROOM & MASTER BATH/9.jpg"
+                },
+                {
+                    "label": "GUEST ROOM",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/3. GUEST ROOM/1.jpg"
+                },
+                {
+                    "label": "GUEST ROOM",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/3. GUEST ROOM/2.jpg"
+                },
+                {
+                    "label": "COMMON BATHROOM",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/4. COMMON BATHROOM/1.jpg"
+                },
+                {
+                    "label": "COMMON BATHROOM",
+                    "src": "Images/RESIDENTIAL/6. POONAM CLUSTER/4. COMMON BATHROOM/2.jpg"
+                }
+            ]
+        },
+        "epsilon": {
+            "title": "Epsilon",
+            "location": "Kandivali",
+            "tagline": "Project Home",
+            "thumbnail": "Images/RESIDENTIAL/7. EPSILON/1. LIVING ROOM/1.jpg",
+            "images": [
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/7. EPSILON/1. LIVING ROOM/1.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/7. EPSILON/1. LIVING ROOM/2.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/7. EPSILON/1. LIVING ROOM/3.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/7. EPSILON/1. LIVING ROOM/4.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/7. EPSILON/2. MASTER BEDROOM/1.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/7. EPSILON/2. MASTER BEDROOM/2.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/7. EPSILON/2. MASTER BEDROOM/3.jpg"
+                },
+                {
+                    "label": "COMMON BEDROOM",
+                    "src": "Images/RESIDENTIAL/7. EPSILON/3. COMMON BEDROOM/1.jpg"
+                },
+                {
+                    "label": "COMMON BEDROOM",
+                    "src": "Images/RESIDENTIAL/7. EPSILON/3. COMMON BEDROOM/2.jpg"
+                },
+                {
+                    "label": "KITCHEN",
+                    "src": "Images/RESIDENTIAL/7. EPSILON/4. KITCHEN/1.jpg"
+                },
+                {
+                    "label": "KITCHEN",
+                    "src": "Images/RESIDENTIAL/7. EPSILON/4. KITCHEN/2.jpg"
+                }
+            ]
+        },
+        "ambrosia": {
+            "title": "Ambrosia",
+            "location": "Borivali",
+            "tagline": "Peaceful Nest - Pending",
+            "thumbnail": "Images/RESIDENTIAL/8. AMBROSIA/1. LIVING ROOM/1.jpg",
+            "images": [
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/1. LIVING ROOM/1.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/1. LIVING ROOM/2.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/1. LIVING ROOM/3.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/1. LIVING ROOM/4.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/1. LIVING ROOM/5.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/2. MASTER BEDROOM/1.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/2. MASTER BEDROOM/2.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/2. MASTER BEDROOM/3.jpg"
+                },
+                {
+                    "label": "KIDS ROOM",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/3. KIDS ROOM/Samir-KB-Rev-1-cc1.jpg"
+                },
+                {
+                    "label": "KIDS ROOM",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/3. KIDS ROOM/Samir-KB-Rev-2-cc.jpg"
+                },
+                {
+                    "label": "GUEST ROOM",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/4. GUEST ROOM/Samir-PB-1- cc.jpg"
+                },
+                {
+                    "label": "GUEST ROOM",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/4. GUEST ROOM/Samir-PB-2-cc.jpg"
+                },
+                {
+                    "label": "KITCHEN",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/5. KITCHEN/1.jpg"
+                },
+                {
+                    "label": "KITCHEN",
+                    "src": "Images/RESIDENTIAL/8. AMBROSIA/5. KITCHEN/2.jpg"
+                }
+            ]
+        },
+        "kaatyani-heights": {
+            "title": "Kaatyani Heights",
+            "location": "Andheri",
+            "tagline": "Art of Perfection",
+            "thumbnail": "Images/RESIDENTIAL/9. KAATYANI HEIGHTS/1. LIVING ROOM/1.jpg",
+            "images": [
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/9. KAATYANI HEIGHTS/1. LIVING ROOM/1.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/9. KAATYANI HEIGHTS/1. LIVING ROOM/2.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/9. KAATYANI HEIGHTS/1. LIVING ROOM/3.jpg"
+                },
+                {
+                    "label": "LIVING ROOM",
+                    "src": "Images/RESIDENTIAL/9. KAATYANI HEIGHTS/1. LIVING ROOM/4.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/9. KAATYANI HEIGHTS/2. MASTER BEDROOM/1.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/9. KAATYANI HEIGHTS/2. MASTER BEDROOM/2.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/9. KAATYANI HEIGHTS/2. MASTER BEDROOM/3.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM",
+                    "src": "Images/RESIDENTIAL/9. KAATYANI HEIGHTS/2. MASTER BEDROOM/4.jpg"
+                },
+                {
+                    "label": "KIDS ROOM",
+                    "src": "Images/RESIDENTIAL/9. KAATYANI HEIGHTS/3. KIDS ROOM/1.jpg"
+                },
+                {
+                    "label": "KIDS ROOM",
+                    "src": "Images/RESIDENTIAL/9. KAATYANI HEIGHTS/3. KIDS ROOM/2.jpg"
+                },
+                {
+                    "label": "KIDS ROOM",
+                    "src": "Images/RESIDENTIAL/9. KAATYANI HEIGHTS/3. KIDS ROOM/3.jpg"
+                }
+            ]
+        },
+        "jayant-heritage": {
+            "title": "Jayant Heritage",
+            "location": "Charni Road",
+            "tagline": "In remembrance of Mr. Shah",
+            "thumbnail": "Images/RESIDENTIAL/10. JAYANT HERITAGE/1. LIVING ROOM & KITCHEN/1.jpg",
+            "images": [
+                {
+                    "label": "LIVING ROOM & KITCHEN",
+                    "src": "Images/RESIDENTIAL/10. JAYANT HERITAGE/1. LIVING ROOM & KITCHEN/1.jpg"
+                },
+                {
+                    "label": "LIVING ROOM & KITCHEN",
+                    "src": "Images/RESIDENTIAL/10. JAYANT HERITAGE/1. LIVING ROOM & KITCHEN/2.jpg"
+                },
+                {
+                    "label": "LIVING ROOM & KITCHEN",
+                    "src": "Images/RESIDENTIAL/10. JAYANT HERITAGE/1. LIVING ROOM & KITCHEN/3.jpg"
+                },
+                {
+                    "label": "LIVING ROOM & KITCHEN",
+                    "src": "Images/RESIDENTIAL/10. JAYANT HERITAGE/1. LIVING ROOM & KITCHEN/4.JPG"
+                },
+                {
+                    "label": "LIVING ROOM & KITCHEN",
+                    "src": "Images/RESIDENTIAL/10. JAYANT HERITAGE/1. LIVING ROOM & KITCHEN/5.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM & BATH",
+                    "src": "Images/RESIDENTIAL/10. JAYANT HERITAGE/2. MASTER BEDROOM & BATH/p04.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM & BATH",
+                    "src": "Images/RESIDENTIAL/10. JAYANT HERITAGE/2. MASTER BEDROOM & BATH/p05.jpg"
+                },
+                {
+                    "label": "MASTER BEDROOM & BATH",
+                    "src": "Images/RESIDENTIAL/10. JAYANT HERITAGE/2. MASTER BEDROOM & BATH/p06.jpg"
+                }
+            ]
+        }
+    },
+    "RETAIL": {
+        "aisraa": {
+            "title": "Aisraa",
+            "location": "Kandivali",
+            "tagline": "A Heritage Loom",
+            "thumbnail": "Images/RETAIL/1. AISRAA/1.jpg",
+            "images": [
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/1. AISRAA/1.jpg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/1. AISRAA/2.jpg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/1. AISRAA/3.jpg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/1. AISRAA/4.jpg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/1. AISRAA/5.jpg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/1. AISRAA/6.jpg"
+                }
+            ]
+        },
+        "mry-gems": {
+            "title": "MRY Gems",
+            "location": "Oman",
+            "tagline": "In the world of Gems",
+            "thumbnail": "Images/RETAIL/2. MRY GEMS/1.jpeg",
+            "images": [
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/2. MRY GEMS/1.jpeg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/2. MRY GEMS/2.jpeg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/2. MRY GEMS/3.jpeg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/2. MRY GEMS/4.jpeg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/2. MRY GEMS/5.jpeg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/2. MRY GEMS/6.jpeg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/2. MRY GEMS/7.jpeg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/2. MRY GEMS/8.jpeg"
+                }
+            ]
+        },
+        "gulf-jewellery-store": {
+            "title": "Gulf Jewellery Store",
+            "location": "Oman",
+            "tagline": "A Legacy Venture",
+            "thumbnail": "Images/RETAIL/3. GULF JEWELLERY STORE/1.jpg",
+            "images": [
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/3. GULF JEWELLERY STORE/1.jpg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/3. GULF JEWELLERY STORE/2.jpg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/3. GULF JEWELLERY STORE/3.jpg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/3. GULF JEWELLERY STORE/4.jpg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/3. GULF JEWELLERY STORE/5.jpg"
+                },
+                {
+                    "label": "",
+                    "src": "Images/RETAIL/3. GULF JEWELLERY STORE/6.jpg"
+                }
+            ]
+        }
+    }
+}
