@@ -30,7 +30,7 @@
         },
         "ca's-office": {
             "title": "CA's Office",
-            "location": "",
+            "location": "Borivali",
             "tagline": "",
             "thumbnail": "Images/COMMERCIAL/2. CA'S OFFICE/ARTWORK.JPG",
             "images": [
@@ -77,7 +77,7 @@
         "oberoi-skycity": {
             "title": "Oberoi Skycity",
             "location": "Borivali",
-            "tagline": "Minimal Luxury at its Best - Pending",
+            "tagline": "Minimal Luxury at its Best",
             "thumbnail": "Images/RESIDENTIAL/1. OBEROI SKYCITY/1. LIVING ROOM/1.jpg",
             "images": [
                 {
@@ -577,7 +577,7 @@
         "ambrosia": {
             "title": "Ambrosia",
             "location": "Borivali",
-            "tagline": "Peaceful Nest - Pending",
+            "tagline": "Peaceful Nest",
             "thumbnail": "Images/RESIDENTIAL/8. AMBROSIA/1. LIVING ROOM/1.jpg",
             "images": [
                 {
